@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;600;700;800&family=Hind+Siliguri:wght@400;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Anton", "Arial Black", sans-serif;
+  --font-sans: "Inter", "Hind Siliguri", sans-serif;
+  --font-bangla: "Hind Siliguri", sans-serif;
+  --color-brand-black: #030303;
+  --color-brand-white: #f8fafc;
+  --color-brand-orange: #f97316;
+  --color-zinc-900: #18181b;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-black text-brand-white font-sans selection:bg-brand-orange selection:text-white;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+.glass {
+  @apply bg-white/5 backdrop-blur-md border-b border-white/5;
+}
+
+.bento-card {
+  @apply bg-white/5 border border-white/10 rounded-xl transition-all duration-300;
+}
+
+.text-massive {
+  @apply text-[15vw] md:text-[140px] leading-[0.8] tracking-tighter uppercase font-display italic opacity-90;
+}
+
+/* Custom Hide Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #030303;
+}
+::-webkit-scrollbar-thumb {
+  background: #f97316;
+}
